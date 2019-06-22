@@ -12,7 +12,7 @@ This is a project that is analyzing some news data by display the:
 ## Prerequisites
 Below are the tools you need to have in order to execute this program:
 1. Python:
-..*Installation for windows
+..* Installation for windows
 ...Download the Python 3 Installer
 ...Open a browser window and navigate to https://www.python.org/downloads/windows/ or at https://www.python.org/.
 ...Underneath the heading at the top that says Python Releases for Windows, click on the link for the Latest Python 3 Release - Python 3.x.x. (As of this writing, the latest is Python 3.6.5.)
@@ -47,12 +47,12 @@ Below are the tools you need to have in order to execute this program:
 ....$ brew install python3
 
 2. Virtual Machine
-..*Installation
+..* Installation
 ...Goto this https://www.virtualbox.org/wiki/Download_Old_Builds_5_1 for your OS
 ...Install the progam
 
 3. Vagrant
-..*Installation
+..* Installation
 ...Goto this link https://www.vagrantup.com/downloads.html to dowload the setup for your OS
 ...Run the installer and verify if complete by typing : **vagrant --version**
 ...Download the configuration file https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5acfbfa3_fsnd-virtual-machine/fsnd-virtual-machine.zip
@@ -69,8 +69,8 @@ Below are the tools you need to have in order to execute this program:
 ...To load the data, cd into the vagrant directory and use the command psql -d news -f newsdata.sql
 
 
-##How To execute the program
-..*Please run the logfile.py file. 
+## How To execute the program
+..* Please run the logfile.py file. 
 There are three functions defined in that file which are:
 1. mp_articles() represents the most popular articles of all time.
 2. mp_article_authors() represents the most popular article authors of all time.
@@ -85,7 +85,7 @@ There are three functions defined in that file which are:
 By default the `mp_articles()` is uncommented and can be execute when the file is ran.
 
 
-##HERE ARE THE COMANDS THAT CAN BE EXECUTED ON PGSQL TO PERFORM THE SAME OPERATIONS
+## HERE ARE THE COMANDS THAT CAN BE EXECUTED ON PGSQL TO PERFORM THE SAME OPERATIONS
 
 <!-- The commands below return the top 3 most popular articles from the 'database'. -->
 ```SELECT title, COUNT(*) AS total_no_views 
@@ -112,6 +112,6 @@ By default the `mp_articles()` is uncommented and can be execute when the file i
     ORDER BY 2 DESC 
     LIMIT 1; 
 ```
-##Author
+## Author
 ---
-..*Muhammad Mustapha Sesay
+..* Muhammad Mustapha Sesay
