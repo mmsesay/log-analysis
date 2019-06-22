@@ -88,9 +88,9 @@ If you are running the logfile.py file, these three functions can be executed by
 By default the `mp_articles()` is uncommented and can be execute when the file is ran.
 
 
-## HERE ARE THE COMANDS THAT CAN BE EXECUTED ON PGSQL TO PERFORM THE SAME OPERATIONS
+## Here are the commands that can be executed on pgsql to perform the same operations
 
-<!-- The commands below return the top 3 most popular articles from the 'database'. -->
+#### The commands below return the top 3 most popular articles from the 'database'.
 ```SELECT title, COUNT(*) AS total_no_views 
     FROM articles JOIN log 
     ON articles.slug=substring(log.path, 10) 
@@ -99,7 +99,7 @@ By default the `mp_articles()` is uncommented and can be execute when the file i
     LIMIT 3;
 ```
 
- <!-- This command return the most popular article authors of all time -->
+#### This command return the most popular article authors of all time
 ```SELECT authors.name, count(*) AS total_no_views
     FROM articles, authors, log 
     WHERE articles.slug = substring(log.path, 10) AND articles.author = authors.id
@@ -107,7 +107,7 @@ By default the `mp_articles()` is uncommented and can be execute when the file i
     ORDER BY 2 DESC;
 ```
 
-<!-- This command return all the days that leads to more than 1% of requests errors -->
+#### This command return all the days that leads to more than 1% of requests errors
 ```SELECT to_char(time,'MONTH DD,YYYY') AS Day, 
     (COUNT(*)::float/100) AS errors_in_percentage 
     FROM log WHERE status = '404 NOT FOUND' 
