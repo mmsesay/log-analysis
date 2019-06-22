@@ -6,73 +6,15 @@
 "Bad things gone, say good people" ---> 170098 views
 
 # MOST POPULAR ARTICLES AUTHORS OF ALL TIME
-Ursula La Multa ---> 4 views
+Ursula La Multa ---> 507594 views
 
-Rudolf von Treppenwitz ---> 2 views
+Rudolf von Treppenwitz ---> 423457 views
 
-Anonymous Contributor ---> 1 views
+Anonymous Contributor ---> 170098 views
 
-Markoff Chaney ---> 1 views
+Markoff Chaney ---> 84557 views
+
 
 # DAYS OF MORE THAN 1% REQUEST ERRORS
-2016-07-31 ---> 3.29 % errors
+JULY      17,2016 ---> 12.65 % errors
 
-2016-07-06 ---> 4.2 % errors
-
-2016-07-17 ---> 12.65 % errors
-
-2016-07-19 ---> 4.33 % errors
-
-2016-07-24 ---> 4.31 % errors
-
-2016-07-12 ---> 3.73 % errors
-
-2016-07-07 ---> 3.6 % errors
-
-2016-07-10 ---> 3.71 % errors
-
-2016-07-25 ---> 3.91 % errors
-
-2016-07-14 ---> 3.83 % errors
-
-2016-07-05 ---> 4.23 % errors
-
-2016-07-13 ---> 3.83 % errors
-
-2016-07-15 ---> 4.08 % errors
-
-2016-07-28 ---> 3.93 % errors
-
-2016-07-03 ---> 4.01 % errors
-
-2016-07-11 ---> 4.03 % errors
-
-2016-07-30 ---> 3.97 % errors
-
-2016-07-02 ---> 3.89 % errors
-
-2016-07-22 ---> 4.06 % errors
-
-2016-07-09 ---> 4.1 % errors
-
-2016-07-27 ---> 3.67 % errors
-
-2016-07-23 ---> 3.73 % errors
-
-2016-07-01 ---> 2.74 % errors
-
-2016-07-16 ---> 3.74 % errors
-
-2016-07-08 ---> 4.18 % errors
-
-2016-07-29 ---> 3.82 % errors
-
-2016-07-18 ---> 3.74 % errors
-
-2016-07-04 ---> 3.8 % errors
-
-2016-07-26 ---> 3.96 % errors
-
-2016-07-21 ---> 4.18 % errors
-
-2016-07-20 ---> 3.83 % errors

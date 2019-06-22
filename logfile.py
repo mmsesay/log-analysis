@@ -4,12 +4,20 @@ import psycopg2
 
 # databaase name
 newsdb = "news"
+# db = psycopg2.connect(database=newsdb)
+
+try:
+   db = psycopg2.connect(database=newsdb)
+   c = db.cursor()
+except psycopg2.Error as e:
+   print("Unable to connect to the database")
+   print(e.pgerror)
+   print(e.diag.message_detail)
+   sys.exit(1)
 
 # most popular articles as mp_articles function()
 def mp_articles():
    """Returns top 3 most popular articles from the 'database"""
-   db = psycopg2.connect(database=newsdb)
-   c = db.cursor()
    c.execute('SELECT title, COUNT(*) AS total_no_views '
             +'FROM articles JOIN log '
             +'ON articles.slug = substring(log.path, 10) '
@@ -27,13 +35,12 @@ def mp_articles():
 # most popular authors of all time as mp_article_authors()
 def mp_article_authors():
    """Return the most popular article authors of all time"""
-   db = psycopg2.connect(database=newsdb)
-   c = db.cursor()
-   c.execute('SELECT authors.name, COUNT(*) AS views '
-            +'FROM articles JOIN authors '
-            +'ON articles.author = authors.id '
-            +'GROUP BY authors.name '
+   c.execute('SELECT authors.name, count(*) AS total_no_views '
+            +'FROM articles, authors, log ' 
+            +'WHERE articles.slug = substring(log.path, 10) AND articles.author = authors.id '
+            +'GROUP BY authors.name ' 
             +'ORDER BY 2 DESC;')
+
    mostPopularAuthors = c.fetchall()
    db.close()
 
@@ -44,12 +51,12 @@ def mp_article_authors():
 # days that leads to more than 1% of requests errors as error_report()
 def error_report():
    """Return all the days that leads to more than 1% of requests errors."""
-   db = psycopg2.connect(database=newsdb)
-   c = db.cursor()
-   c.execute('SELECT Date(time) AS days, '
-            +'(COUNT(*)::float/100) AS request_errors '
+   c.execute('SELECT to_char(time,\'MONTH DD,YYYY\') AS Day, '
+            +'(COUNT(*)::float/100) AS errors_in_percentage '
             +'FROM log WHERE status = \'404 NOT FOUND\' '
-            +'GROUP BY Days;')
+            +'GROUP BY Day '
+            +'ORDER BY 2 DESC '
+            +'LIMIT 1; ')
    requestErrors = c.fetchall()
    db.close()
 
@@ -60,4 +67,3 @@ if __name__ == '__main__':
    mp_articles()
    # mp_article_authors()
    # error_report()
-
