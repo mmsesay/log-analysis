@@ -1,10 +1,10 @@
 
-# LOG ANALYSIS 
+# LOG ANALYSIS - Udacity Project 1
 ## FULLSTACK-NANODEGREE
 ------
 ## About
 
-This is a project that is analyzing a new data by display the: 
+This is a project that is analyzing some news data by display the: 
 1. most popular articles of all time
 2. most popular articles of all time and
 3. the day that most requests leads to more than 1% of errors.
